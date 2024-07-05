@@ -1,0 +1,13 @@
+[2024-07-05 16:25:57 - api_methods.py:21 - get_lat_long() -INFO - grabbing latitude and longitude from openstreetmap
+[2024-07-05 16:25:58 - api_methods.py:32 - get_lat_long() -ERROR - unable to get coords for address 4429 S. Old Missouri Rd, Springdale, AR 72764, bad response code
+[2024-07-05 16:25:58 - forecast_service.py:31 - get_lat_long() -ERROR - unable to get lat & long from open street maps
+[2024-07-05 16:28:35 - api_methods.py:21 - get_lat_long() -INFO - grabbing latitude and longitude from openstreetmap
+[2024-07-05 16:28:35 - api_methods.py:32 - get_lat_long() -ERROR - unable to get coords for address 4429 S. Old Missouri Rd Springdale, AR 72764, bad response code
+[2024-07-05 16:28:35 - forecast_service.py:31 - get_lat_long() -ERROR - unable to get lat & long from open street maps
+[2024-07-05 16:30:12 - api_methods.py:21 - get_lat_long() -INFO - grabbing latitude and longitude from openstreetmap
+[2024-07-05 16:30:13 - api_methods.py:32 - get_lat_long() -ERROR - unable to get coords for address 5612 Hawthorne Rd Little Rock AR 72207, bad response code
+[2024-07-05 16:30:13 - forecast_service.py:31 - get_lat_long() -ERROR - unable to get lat & long from open street maps
+[2024-07-05 16:36:07 - api_methods.py:21 - get_lat_long() -INFO - grabbing latitude and longitude from openstreetmap
+[2024-07-05 16:36:08 - api_methods.py:33 - get_lat_long() -ERROR - unable to get coords for address 4429 S. Old Missouri Rd, bad response code
+[2024-07-05 16:36:08 - forecast_service.py:31 - get_lat_long() -ERROR - unable to get lat & long from open street maps
+[2024-07-05 16:45:57 - api_methods.py:24 - get_lat_long() -INFO - grabbing latitude and longitude from openstreetmap

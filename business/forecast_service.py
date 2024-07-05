@@ -12,3 +12,21 @@ def get_forecast_data(latitude, longitude):
     try:
         logger.info('retrieving forecast data')
         response = dal.retrieve_forecast(latitude, longitude, TODAYS_DATE, TWO_WEEKS_LATER)
+        return response
+    except (DalException, Exception):
+        logger.error('Unable to gather forecast data')
+        raise BusinessLogicException
+
+
+def get_lat_long(address: str):
+    """
+    calls on the get_lat_long function in the dal to return a latitude and longitude from Open Street Maps for a
+        given address.
+    :param address: the user's address they enter into the gui form
+    :return: the results of dal.get_lat_long()
+    """
+    try:
+        return dal.get_lat_long(address.strip())
+    except DalException:
+        logger.error('unable to get lat & long from open street maps')
+        raise BusinessLogicException

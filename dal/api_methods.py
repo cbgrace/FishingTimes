@@ -18,8 +18,10 @@ def get_lat_long(address: str) -> tuple:
         'format': 'json',
         'q': address
     }
+    headers = { 'user-agent': 'FishingTimes by Charles Grace' }  # have to include identifying user-agent with OpenStreetMaps now...
     logger.info('grabbing latitude and longitude from openstreetmap')
-    coords_response = requests.get(url, params=params)
+    coords_response = requests.get(url, params=params, headers=headers)
+    print(coords_response.status_code)
     if coords_response.status_code == GOOD_RESPONSE_CODE:
         coords_response = coords_response.json()
         try:
@@ -45,7 +47,7 @@ def retrieve_forecast(latitude, longitude, start_date, end_date):
     url = f"https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/{latitude},{longitude}/{start_date}/{end_date}"
     params = {
         'key': '7VGGR8GZQBVWFMPQ276TFHMKM',
-        'elements': "datetime,moonphase,sunrise,sunset,moonrise,moonset,conditions"
+        'elements': "datetime,moonphase,sunrise,sunset,moonrise,moonset,conditions,pressure"
     }
     logger.info('attempting to get sunrise/sunset times from visualcrossing')
     response = requests.get(url, params=params)
