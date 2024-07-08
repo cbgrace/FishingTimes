@@ -35,7 +35,7 @@ class Forecast:
     To convert from mb (the unit of pressure this weather data is stated in) to inHg (the unit I have for optimal
     fishing conditions) you divide the pressure value by 33.864
     
-    ideal barometric pressure: 29.5 to 30.5 inHg , or 998.985 -> 1032.85 mb
+    ideal barometric pressure: 29.8 to 30.2 inHg , or 1009.144 -> 1022.69 mb
     """
 
     @property
