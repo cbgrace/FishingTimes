@@ -51,7 +51,7 @@ def get_forecast_data(latitude, longitude):
                 moonset = 0
             hour_and_conditions_dict = {}
             for hour in response['days'][i]['hours']:
-                hour_and_conditions_dict[hour['datetime']] = hour['conditions']
+                hour_and_conditions_dict[hour['datetime']] = (hour['conditions'], hour['pressure'])
             i += 1
             # create a Forecast object with the data
             new_forecast = models.Forecast(forecast_date, sunrise, sunset, moonphase, moonrise, moonset, timezone,

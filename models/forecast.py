@@ -109,5 +109,5 @@ class Forecast:
         return f"{self.date} rise:{self.sunrise}, sets:{self.sunset}, moon:{self.translate_moonphase()}{self._moonset}, {self._hourly_conditions_dict}"
 
     def __repr__(self):
-        return f"{self.date} rise:{self.sunrise}, sets:{self.sunset}, moon:{self.translate_moonphase()}{self._moonset}, {self._hourly_conditions_dict}"
+        return f"{self.date} rise:{self.sunrise}, sets:{self.sunset}, moon:{self.translate_moonphase()} {self._moonset}, {self._hourly_conditions_dict}"
 
