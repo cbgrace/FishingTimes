@@ -16,3 +16,19 @@
 [2024-07-08 12:59:42 - forecast_service.py:13 - get_forecast_data() -INFO - retrieving forecast data
 [2024-07-08 12:59:42 - api_methods.py:51 - retrieve_forecast() -INFO - attempting to get sunrise/sunset times from visualcrossing
 [2024-07-08 12:59:42 - api_methods.py:56 - retrieve_forecast() -INFO - succesffuly retireved sunrise/sunset times
+[2024-07-08 15:41:21 - forecast_service.py:76 - get_lat_long() -INFO - Retrieving user's lat/lon from their address string.
+[2024-07-08 15:41:21 - api_methods.py:22 - get_lat_long() -INFO - grabbing latitude and longitude from openstreetmap
+[2024-07-08 15:41:22 - forecast_service.py:29 - get_forecast_data() -INFO - attempting to get forecast data
+[2024-07-08 15:41:22 - api_methods.py:51 - retrieve_forecast() -INFO - attempting to get sunrise/sunset times from visualcrossing
+[2024-07-08 15:41:22 - api_methods.py:56 - retrieve_forecast() -INFO - succesffuly retireved sunrise/sunset times
+[2024-07-08 15:41:22 - forecast_service.py:61 - get_forecast_data() -INFO - Successfully gathered relevant forecast data.
+[2024-07-08 15:43:27 - forecast_service.py:76 - get_lat_long() -INFO - Retrieving user's lat/lon from their address string.
+[2024-07-08 15:43:27 - api_methods.py:22 - get_lat_long() -INFO - grabbing latitude and longitude from openstreetmap
+[2024-07-08 15:43:28 - api_methods.py:30 - get_lat_long() -ERROR - unable to get coords for address 459 N Campus Walk, Fayetteville, AR 72701
+[2024-07-08 15:43:28 - forecast_service.py:79 - get_lat_long() -ERROR - unable to get lat & long from open street maps
+[2024-07-08 15:44:59 - forecast_service.py:76 - get_lat_long() -INFO - Retrieving user's lat/lon from their address string.
+[2024-07-08 15:44:59 - api_methods.py:22 - get_lat_long() -INFO - grabbing latitude and longitude from openstreetmap
+[2024-07-08 15:45:00 - forecast_service.py:29 - get_forecast_data() -INFO - attempting to get forecast data
+[2024-07-08 15:45:00 - api_methods.py:51 - retrieve_forecast() -INFO - attempting to get sunrise/sunset times from visualcrossing
+[2024-07-08 15:45:01 - api_methods.py:56 - retrieve_forecast() -INFO - succesffuly retireved sunrise/sunset times
+[2024-07-08 15:45:01 - forecast_service.py:61 - get_forecast_data() -INFO - Successfully gathered relevant forecast data.

@@ -12,7 +12,8 @@ def get_user_input(prompt: str) -> str:
 
 
 def run_test():
-    address = get_user_input('What is your address? > ')  # get address from user
+    # address = get_user_input('What is your address? > ')  # get address from user
+    address = '930 W Clinton Dr, Fayetteville, AR 72701'
     lat_lon = b.get_lat_long(address)  # retrieve lat/lon from address
     latitude = lat_lon[0]
     longitude = lat_lon[1]
