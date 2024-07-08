@@ -46,7 +46,7 @@ def retrieve_forecast(latitude, longitude, start_date, end_date):
     url = f"https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/{latitude},{longitude}/{start_date}/{end_date}"
     params = {
         'key': '7VGGR8GZQBVWFMPQ276TFHMKM',
-        'elements': "datetime,moonphase,sunrise,sunset,moonrise,moonset,conditions,pressure"
+        'elements': "datetime,moonphase,sunrise,sunset,moonrise,moonset,conditions,pressure,temp"
     }
     logger.info('attempting to get sunrise/sunset times from visualcrossing')
     response = requests.get(url, params=params)

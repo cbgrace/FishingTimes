@@ -1,6 +1,6 @@
 parameters:
 
-ideal barometric pressure: 29.5 to 30.5 atm , or 29890.88 to 30904.13 mb
+ideal barometric pressure: 29.5 to 30.5 inHg , or 998.985 -> 1032.85 mb
 ideal water temp: 70 to 85 degrees
 ideal cloud cover: overcast
 2 hours before/after rain

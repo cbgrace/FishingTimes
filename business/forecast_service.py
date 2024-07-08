@@ -7,20 +7,12 @@ import models
 
 logger = get_logger(__name__)
 TODAYS_DATE = date.today()
-TWO_WEEKS_LATER = TODAYS_DATE + timedelta(days=13)
+TWO_WEEKS_LATER = TODAYS_DATE + timedelta(days=14)
 
-# def get_forecast_data(latitude, longitude):
-#     try:
-#         logger.info('retrieving forecast data')
-#         response = dal.retrieve_forecast(latitude, longitude, TODAYS_DATE, TWO_WEEKS_LATER)
-#         return response
-#     except (DalException, Exception):
-#         logger.error('Unable to gather forecast data')
-#         raise BusinessLogicException
 
 def get_forecast_data(latitude, longitude):
     """
-
+    I commandeered this from a previous project. It could probably use some optimization...
     :param latitude: the user's latitude
     :param longitude: the user's longitude
     :return: a list of Forecast objects.
@@ -51,7 +43,7 @@ def get_forecast_data(latitude, longitude):
                 moonset = 0
             hour_and_conditions_dict = {}
             for hour in response['days'][i]['hours']:
-                hour_and_conditions_dict[hour['datetime']] = (hour['conditions'], hour['pressure'])
+                hour_and_conditions_dict[hour['datetime']] = (hour['temp'], hour['conditions'], hour['pressure'])
             i += 1
             # create a Forecast object with the data
             new_forecast = models.Forecast(forecast_date, sunrise, sunset, moonphase, moonrise, moonset, timezone,

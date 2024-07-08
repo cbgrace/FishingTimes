@@ -28,6 +28,16 @@ class Forecast:
         self._timezone_offset = float(timezone_offset)
         self._hourly_conditions_dict = hourly_conditions_dict
 
+    """
+    Right now the pressure is in the hourly_conditions_dict, it changes by the hour and I need to know the pressure for
+    each hour, so it makes sense to keep it there at the moment. 
+    
+    To convert from mb (the unit of pressure this weather data is stated in) to inHg (the unit I have for optimal
+    fishing conditions) you divide the pressure value by 33.864
+    
+    ideal barometric pressure: 29.5 to 30.5 inHg , or 998.985 -> 1032.85 mb
+    """
+
     @property
     def date(self):
         return self._date
@@ -105,9 +115,29 @@ class Forecast:
         else:
             return 'Error Grabbing Moon Phase'  # just in case...
 
+    def return_hourly_pressure(self):
+        hourly_pressure_dict = {}  # create a dict to store the hourly pressures
+        for hour, forecast_tuple in self._hourly_conditions_dict.items():
+            hourly_pressure_dict[hour] = forecast_tuple[2]  # set it equal to the second item in the tuple (the pressure)
+        return hourly_pressure_dict
+
+    def return_hourly_conditions(self):
+        # I guess I might as well add this too, if I add the above method.
+        hourly_conditions_dict = {}  # create a dict to store the hourly condition strings
+        for hour, forecast_tuple in self._hourly_conditions_dict.items():
+            hourly_conditions_dict[hour] = forecast_tuple[1]  # set it equal to the first item in the tuple
+        return hourly_conditions_dict
+
+    def return_hourly_temps(self):
+        hourly_temps_dict = {}
+        for hour, forecast_tuple in self._hourly_conditions_dict.items():
+            hourly_temps_dict[hour] = forecast_tuple[0]
+        return hourly_temps_dict
+
     def __str__(self):
         return f"{self.date} rise:{self.sunrise}, sets:{self.sunset}, moon:{self.translate_moonphase()}{self._moonset}, {self._hourly_conditions_dict}"
 
     def __repr__(self):
+        # repr is necessary for printing objects to the console (I usually only come across this in testing)
         return f"{self.date} rise:{self.sunrise}, sets:{self.sunset}, moon:{self.translate_moonphase()} {self._moonset}, {self._hourly_conditions_dict}"
 
