@@ -11,3 +11,8 @@
 [2024-07-05 16:36:08 - api_methods.py:33 - get_lat_long() -ERROR - unable to get coords for address 4429 S. Old Missouri Rd, bad response code
 [2024-07-05 16:36:08 - forecast_service.py:31 - get_lat_long() -ERROR - unable to get lat & long from open street maps
 [2024-07-05 16:45:57 - api_methods.py:24 - get_lat_long() -INFO - grabbing latitude and longitude from openstreetmap
+[2024-07-08 12:58:25 - api_methods.py:22 - get_lat_long() -INFO - grabbing latitude and longitude from openstreetmap
+[2024-07-08 12:59:41 - api_methods.py:22 - get_lat_long() -INFO - grabbing latitude and longitude from openstreetmap
+[2024-07-08 12:59:42 - forecast_service.py:13 - get_forecast_data() -INFO - retrieving forecast data
+[2024-07-08 12:59:42 - api_methods.py:51 - retrieve_forecast() -INFO - attempting to get sunrise/sunset times from visualcrossing
+[2024-07-08 12:59:42 - api_methods.py:56 - retrieve_forecast() -INFO - succesffuly retireved sunrise/sunset times

@@ -1,14 +1,20 @@
 import business as b
 
-def get_user_input(prompt: str):
+
+def get_user_input(prompt: str) -> str:
     """
-    retrieves user input from the console
-    :param prompt: the prompt you would like to display to the user
-    :return: the response to a given prompt (string)
+    cleans up the user input a bit
+    :param prompt: the prompt you wish to display in the console
+    :return: the user's response
     """
-    return input(prompt)
+    user_response = input(prompt)
+    return user_response.strip()
+
 
 def run_test():
     address = get_user_input('What is your address? > ')  # get address from user
     lat_lon = b.get_lat_long(address)  # retrieve lat/lon from address
-    print(lat_lon)
+    latitude = lat_lon[0]
+    longitude = lat_lon[1]
+    forecast_data = b.get_forecast_data(latitude, longitude)
+    print(forecast_data)

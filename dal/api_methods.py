@@ -21,7 +21,6 @@ def get_lat_long(address: str) -> tuple:
     headers = { 'user-agent': 'FishingTimes by Charles Grace' }  # have to include identifying user-agent with OpenStreetMaps now...
     logger.info('grabbing latitude and longitude from openstreetmap')
     coords_response = requests.get(url, params=params, headers=headers)
-    print(coords_response.status_code)
     if coords_response.status_code == GOOD_RESPONSE_CODE:
         coords_response = coords_response.json()
         try:
